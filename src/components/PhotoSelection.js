@@ -6,7 +6,7 @@ class PhotoSelection extends Component {
     return (
       <div>
         <p>{this.props.photoData.username}</p>
-        <div> <img src={imgPath} /> </div>
+        <div> <img id='photo-selected' src={imgPath} /> </div>
       </div>
     );
   }
