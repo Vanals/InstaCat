@@ -20,7 +20,7 @@ describe('PhotosFeed Component', () => {
   })
 
   it('renders a Photo component', () => {
-    expect(dataWrapper.find('<Photo />').exists()).toEqual(true);
+    expect(dataWrapper.find('Photo').exists()).toEqual(true);
   });
 
 })
