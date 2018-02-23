@@ -5,7 +5,7 @@ class PhotoSelection extends Component {
     const imgPath = "./images/" + `${this.props.photoName}`
     return (
       <div>
-        <div> <img src={imgPath} className='cat-photo'/> </div>
+        <div> <img src={imgPath} /> </div>
       </div>
     );
   }
