@@ -5,7 +5,7 @@ import PhotoSelection from '../PhotoSelection'
 describe('PhotoSelection Component', () => {
 
   let wrapper
-  const imageLink = { imageLink: 'cat1.jpeg' }
+  const imageLink = { imageLink: 'cat1.jpeg', username: 'MarcoMVF' }
   beforeEach(() => {
     wrapper = shallow(<PhotoSelection photoData={imageLink} />);
   });
@@ -18,5 +18,8 @@ describe('PhotoSelection Component', () => {
     expect(wrapper.find('img').prop('src')).toEqual('./images/cat1.jpeg');
   });
 
+  it('renders a img tag', () => {
+    expect(wrapper.find('p').text()).toEqual('MarcoMVF');
+  });
 
 })
