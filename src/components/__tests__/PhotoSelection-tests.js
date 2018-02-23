@@ -5,7 +5,14 @@ import PhotoSelection from '../PhotoSelection'
 describe('PhotoSelection Component', () => {
 
   let wrapper
-  const imageLink = { imageLink: 'cat1.jpeg', username: 'MarcoMVF', userIconLink: 'MakersAcademy.jpeg', description: 'Marco is an awsome developer' }
+  const imageLink = {
+    imageLink: 'cat1.jpeg',
+    username: 'MarcoMVF',
+    userIconLink: 'MakersAcademy.jpeg',
+    description: 'Marco is an awsome developer',
+    likes: 1000
+  }
+
   beforeEach(() => {
     wrapper = shallow(<PhotoSelection photoData={imageLink} />);
   });
@@ -31,7 +38,11 @@ describe('PhotoSelection Component', () => {
   });
 
   it('renders a p tag showing how many likes the picture has', () => {
-    expect(wrapper.find('#likes-number').text()).toEqual('1000');
+    expect(wrapper.find('#likes-amount').text()).toEqual('1000');
+  });
+
+  it('render the Like button', () => {
+    expect(wrapper.find('#like-button').exists()).toEqual(true);
   });
 
 })
