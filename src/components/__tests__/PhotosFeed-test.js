@@ -4,10 +4,19 @@ import PhotosFeed from '../PhotosFeed'
 
 describe('PhotosFeed Component', () => {
 
-  let wrapper;
+  const photofeeds = {
+    photoCards: [{ imageLink: 'cat1.jpeg' }],
+    photoSelectionHandler: jest.fn(),
+  }
+
+  let dataWrapper
+
   beforeEach(() => {
-    wrapper = shallow(<PhotosFeed />);
+    dataWrapper = shallow(<PhotosFeed {...photofeeds} />);
   });
 
+  it('renders a Photo component', () => {
+    expect(dataWrapper.find('<Photo />').exists()).toEqual(true);
+  });
 
 })
