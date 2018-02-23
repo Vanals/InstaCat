@@ -14,7 +14,7 @@ describe('PhotoSelection Component', () => {
     expect(wrapper.type()).toEqual('div');
   })
 
-  it('renders a img tag with the src value given by props', () => {
+  it('renders the picture selected on base of the data given by props', () => {
     expect(wrapper.find('#photo-selected').prop('src')).toEqual('./images/cat1.jpeg');
   });
 
@@ -22,7 +22,7 @@ describe('PhotoSelection Component', () => {
     expect(wrapper.find('p').text()).toEqual('MarcoMVF');
   });
 
-  it('renders a img tag with the src value given by props', () => {
+  it('renders the correct avatar with the src value given by props', () => {
     expect(wrapper.find('#avatar').prop('src')).toEqual('./avatars/MakersAcademy.jpeg');
   });
 
