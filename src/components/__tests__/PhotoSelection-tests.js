@@ -19,7 +19,7 @@ describe('PhotoSelection Component', () => {
   });
 
   it('renders a p tag containing the username/alias of the user who posted the picture', () => {
-    expect(wrapper.find('p').text()).toEqual('MarcoMVF');
+    expect(wrapper.find('#username').text()).toEqual('MarcoMVF');
   });
 
   it('renders the correct avatar using the src\'s value given by props', () => {
