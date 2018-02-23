@@ -9,23 +9,30 @@ class App extends Component {
     super(props);
     this.state = {
       photoCards: photoCardsData,
-      selectedPhoto: []
+      selectedPhoto: [],
+      showPhotoSelection: false
     };
   }
 
 
   photoSelectionHandler = (index) => {
-    this.setState({selectedPhoto: this.state.photoCards[index] })
+    this.setState({
+      selectedPhoto: this.state.photoCards[index],
+      showPhotoSelection: true
+    })
+    console.log(this.state)
   }
 
   render() {
     return (
     <div>
       <div>
-        <PhotosFeed photoCards={this.state.photoCards} photoSelectionHandler={this.photoSelectionHandler}/>
+        { !this.state.showPhotoSelection && <PhotosFeed photoCards={this.state.photoCards} photoSelectionHandler={this.photoSelectionHandler}/> }
+
       </div>
       <div>
-        <PhotoSelection photoName={this.state.selectedPhoto.imageLink}/>
+        { this.state.showPhotoSelection && <PhotoSelection photoName={this.state.selectedPhoto.imageLink}/> }
+
       </div>
     </div>
     );
