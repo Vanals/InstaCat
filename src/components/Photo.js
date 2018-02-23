@@ -6,7 +6,7 @@ class Photo extends Component {
     const imgPath = "./images/" + `${this.props.photoName}`
     return (
       <div>
-        <div> <img src={imgPath} className='cat-photo'/> </div>
+        <div> <img src={imgPath} className='cat-photo' onClick={() => this.props.photoSelectionHandler(this.props.index)}/> </div>
       </div>
     );
   }
