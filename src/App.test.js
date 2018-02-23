@@ -1,9 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow, mount, render } from 'enzyme';
+import App from './App'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+describe('App Component', () => {
+
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+
+  it('renders without crashing', () => {
+    expect(wrapper.type()).toEqual('div');
+  })
+
+  it('renders the PhotosFeed component', () => {
+    expect(wrapper.find('PhotosFeed').exists()).toEqual(true);
+  });
+
+  it('renders the PhotoSelection component', () => {
+    expect(wrapper.find('PhotoSelection').exists()).toEqual(true);
+  });
+
+})
