@@ -5,6 +5,7 @@ class PhotoSelection extends Component {
     const imgPath = "./images/" + `${this.props.photoData.imageLink}`
     return (
       <div>
+        <p>{this.props.photoData.username}</p>
         <div> <img src={imgPath} /> </div>
       </div>
     );
