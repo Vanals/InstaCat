@@ -20,7 +20,6 @@ class App extends Component {
       selectedPhoto: this.state.photoCards[index],
       showPhotoSelection: true
     })
-    console.log(this.state)
   }
 
   render() {
@@ -28,11 +27,9 @@ class App extends Component {
     <div>
       <div>
         { !this.state.showPhotoSelection && <PhotosFeed photoCards={this.state.photoCards} photoSelectionHandler={this.photoSelectionHandler}/> }
-
       </div>
       <div>
         { this.state.showPhotoSelection && <PhotoSelection photoName={this.state.selectedPhoto.imageLink}/> }
-
       </div>
     </div>
     );

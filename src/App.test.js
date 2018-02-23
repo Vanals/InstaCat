@@ -19,7 +19,7 @@ describe('App Component', () => {
   });
 
   it('renders the PhotoSelection component', () => {
-    expect(wrapper.find('PhotoSelection').exists()).toEqual(true);
+    expect(wrapper.find('PhotoSelection').exists()).toEqual(false);
   });
 
 })
