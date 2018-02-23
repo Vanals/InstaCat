@@ -6,7 +6,7 @@ describe('PhotosFeed Component', () => {
 
   const photofeeds = {
     photoCards: [{ imageLink: 'cat1.jpeg' }],
-    photoSelectionHandler: jest.fn(),
+    photoSelectionHandler: jest.fn()
   }
 
   let dataWrapper
@@ -14,6 +14,10 @@ describe('PhotosFeed Component', () => {
   beforeEach(() => {
     dataWrapper = shallow(<PhotosFeed {...photofeeds} />);
   });
+
+  it('renders without crashing', () => {
+    expect(dataWrapper.type()).toEqual('div');
+  })
 
   it('renders a Photo component', () => {
     expect(dataWrapper.find('<Photo />').exists()).toEqual(true);
