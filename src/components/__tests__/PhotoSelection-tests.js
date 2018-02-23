@@ -30,5 +30,8 @@ describe('PhotoSelection Component', () => {
     expect(wrapper.find('#description-photo').text()).toEqual('Marco is an awsome developer');
   });
 
+  it('renders a p tag showing how many likes the picture has', () => {
+    expect(wrapper.find('#likes-number').text()).toEqual('1000');
+  });
 
 })
