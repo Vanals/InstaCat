@@ -22,4 +22,9 @@ describe('App Component', () => {
     expect(wrapper.find('PhotoSelection').exists()).toEqual(false);
   });
 
+  it('renders the PhotoSelection component', () => {
+    expect(wrapper.instance().likeButtonHandler(0))
+    expect(wrapper.state.photoCards[0].likes).toEqual(54);
+  });
+
 })
