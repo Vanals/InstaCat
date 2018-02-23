@@ -5,7 +5,7 @@ import PhotoSelection from '../PhotoSelection'
 describe('PhotoSelection Component', () => {
 
   let wrapper
-  const imageLink = { imageLink: 'cat1.jpeg', username: 'MarcoMVF', userIconLink: 'MakersAcademy.jpeg' }
+  const imageLink = { imageLink: 'cat1.jpeg', username: 'MarcoMVF', userIconLink: 'MakersAcademy.jpeg', description: 'Marco is an awsome developer' }
   beforeEach(() => {
     wrapper = shallow(<PhotoSelection photoData={imageLink} />);
   });
@@ -14,16 +14,21 @@ describe('PhotoSelection Component', () => {
     expect(wrapper.type()).toEqual('div');
   })
 
-  it('renders the picture selected on base of the data given by props', () => {
+  it('renders the picture selected in base of the data given by props', () => {
     expect(wrapper.find('#photo-selected').prop('src')).toEqual('./images/cat1.jpeg');
   });
 
-  it('renders a img tag', () => {
+  it('renders a p tag containing the username/alias of the user who posted the picture', () => {
     expect(wrapper.find('p').text()).toEqual('MarcoMVF');
   });
 
-  it('renders the correct avatar with the src value given by props', () => {
+  it('renders the correct avatar using the src\'s value given by props', () => {
     expect(wrapper.find('#avatar').prop('src')).toEqual('./avatars/MakersAcademy.jpeg');
   });
+
+  it('renders a p tag containing the description of the photo selected', () => {
+    expect(wrapper.find('#description-photo').text()).toEqual('Marco is an awsome developer');
+  });
+
 
 })
