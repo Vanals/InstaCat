@@ -14,8 +14,8 @@ describe('PhotoSelection Component', () => {
     expect(wrapper.type()).toEqual('div');
   })
 
-  it('renders a img tag', () => {
-    expect(wrapper.find('img').prop('src')).toEqual('./images/cat1.jpeg');
+  it('renders a img tag with the src value given by props', () => {
+    expect(wrapper.find('#photo-selected').prop('src')).toEqual('./images/cat1.jpeg');
   });
 
   it('renders a img tag', () => {
