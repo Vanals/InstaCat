@@ -29,7 +29,7 @@ class App extends Component {
         { !this.state.showPhotoSelection && <PhotosFeed photoCards={this.state.photoCards} photoSelectionHandler={this.photoSelectionHandler}/> }
       </div>
       <div>
-        { this.state.showPhotoSelection && <PhotoSelection photoName={this.state.selectedPhoto.imageLink}/> }
+        { this.state.showPhotoSelection && <PhotoSelection photoData={this.state.selectedPhoto}/> }
       </div>
     </div>
     );

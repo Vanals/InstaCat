@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class PhotoSelection extends Component {
   render() {
-    const imgPath = "./images/" + `${this.props.photoName}`
+    const imgPath = "./images/" + `${this.props.photoData.imageLink}`
     return (
       <div>
         <div> <img src={imgPath} /> </div>

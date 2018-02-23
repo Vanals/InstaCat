@@ -5,9 +5,9 @@ import PhotoSelection from '../PhotoSelection'
 describe('PhotoSelection Component', () => {
 
   let wrapper
-
+  const imageLink = { imageLink: 'cat1.jpeg' }
   beforeEach(() => {
-    wrapper = shallow(<PhotoSelection photoName='cat1.jpeg' />);
+    wrapper = shallow(<PhotoSelection photoData={imageLink} />);
   });
 
   it('renders without crashing', () => {
