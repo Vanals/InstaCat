@@ -11,7 +11,7 @@ describe('App Component', () => {
     wrapper = shallow(<App />);
 
     wrapperInstance = wrapper.instance()
-    wrapperInstance.setState({photoCards: [ {likes:53}, {likes:100} ], selectedPhoto: { indexKey: 0} })
+    wrapperInstance.setState({photoCards: [ {likes:53, liked: false}, {likes:100} ], selectedPhoto: { indexKey: 0} })
   });
 
   it('renders without crashing', () => {
@@ -26,9 +26,15 @@ describe('App Component', () => {
     expect(wrapper.find('PhotoSelection').exists()).toEqual(false);
   });
 
-  it('call likeButtonHandler, which increase the like amount of the selected picture by 1', () => {
+  it('call likeButtonHandler when liked false. It should increase the like amount of the selected picture by 1', () => {
     expect(wrapperInstance.likeButtonHandler())
     expect(wrapperInstance.state.photoCards[0].likes).toEqual(54);
+  });
+
+  it('call likeButtonHandler when liked true. It shouldn\'t increase the like amount of the selected picture by 1', () => {
+    wrapperInstance.setState({photoCards: [ {likes:53, liked: true}, {likes:100} ], selectedPhoto: { indexKey: 0} })
+    expect(wrapperInstance.likeButtonHandler())
+    expect(wrapperInstance.state.photoCards[0].likes).toEqual(53);
   });
 
   it('call setIndexKey', () => {
