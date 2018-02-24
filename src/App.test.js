@@ -50,7 +50,7 @@ describe('App Component', () => {
 
   it('call deletePhotoCard', () => {
     expect(wrapperInstance.deletePhotoCard(1))
-    expect(wrapperInstance.state.photoCards.length).toEqual(1);
+    expect(wrapperInstance.state.photoCards[1]).toEqual(undefined);
   });
 
 
