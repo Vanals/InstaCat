@@ -49,10 +49,14 @@ describe('PhotoSelection Component', () => {
     const mockCallBack = jest.fn()
     const wrapper = shallow(<PhotoSelection likeButtonHandler={mockCallBack} photoData={imageLink}/>);
     wrapper.find('#like-button').simulate('click');
-    console.log(mockCallBack.mock, '1')
-    console.log(mockCallBack.mock.calls, '2')
-    console.log(mockCallBack.mock.calls.length, '3')
     expect(mockCallBack.mock.calls.length).toEqual(1)
-
   });
+
+  it('test if an onClick function is called when the like Go Back button is clicked', () => {
+    const mockCallBack = jest.fn()
+    const wrapper = shallow(<PhotoSelection showFeeds={mockCallBack} photoData={imageLink}/>);
+    wrapper.find('#back-button').simulate('click');
+    expect(mockCallBack.mock.calls.length).toEqual(1)
+  });
+
 })
