@@ -18,7 +18,7 @@ class App extends Component {
     this.setIndexKey()
   }
 
-  //this allow me to refer to the correct picture for like, for example
+  //this allow me to refer to the correct picture for the like button.
   setIndexKey = () => {
     const photoCardWithIndex = this.state.photoCards.map((photoCard, index) => {
     photoCard.indexKey = index;
@@ -29,9 +29,13 @@ class App extends Component {
 
   likeButtonHandler = () => {
     const photoCards = this.state.photoCards
-    photoCards[this.state.selectedPhoto.indexKey].likes += 1
-    this.forceUpdate()
-    console.log(this.state)
+    const selectedPhotoIndex = this.state.selectedPhoto.indexKey
+    //Use set state for the following code??
+    if (photoCards[selectedPhotoIndex].liked === false) {
+      photoCards[selectedPhotoIndex].likes += 1
+      photoCards[selectedPhotoIndex].liked = true
+      this.forceUpdate()
+    }
   }
 
   photoSelectionHandler = (index) => {
