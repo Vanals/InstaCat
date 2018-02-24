@@ -14,16 +14,30 @@ class App extends Component {
     };
   }
 
-  likeButtonHandler = (index) => {
+  componentDidMount() {
+    this.setIndexKey()
+  }
+
+  //this allow me to refer to the correct picture for like, for example
+  setIndexKey = () => {
+    const photoCardWithIndex = this.state.photoCards.map((photoCard, index) => {
+    photoCard.indexKey = index;
+    return photoCard;
+    });
+    this.setState({photoCards: photoCardWithIndex });
+  }
+
+  likeButtonHandler = () => {
     const photoCards = this.state.photoCards
-    photoCards[index].likes += 1
+    photoCards[this.state.selectedPhoto.indexKey].likes += 1
     this.forceUpdate()
+    console.log(this.state)
   }
 
   photoSelectionHandler = (index) => {
     this.setState({
       selectedPhoto: this.state.photoCards[index],
-      showPhotoSelection: true
+      showPhotoSelection: true,
     })
   }
 
@@ -31,10 +45,21 @@ class App extends Component {
     return (
     <div>
       <div>
-        { !this.state.showPhotoSelection && <PhotosFeed photoCards={this.state.photoCards} photoSelectionHandler={this.photoSelectionHandler}/> }
+        {
+          !this.state.showPhotoSelection &&
+          <PhotosFeed
+            photoCards={this.state.photoCards}
+            photoSelectionHandler={this.photoSelectionHandler}
+          />
+        }
       </div>
       <div>
-        { this.state.showPhotoSelection && <PhotoSelection photoData={this.state.selectedPhoto}/> }
+        { this.state.showPhotoSelection &&
+          <PhotoSelection
+            photoData={this.state.selectedPhoto}
+            likeButtonHandler={this.likeButtonHandler}
+          />
+        }
       </div>
     </div>
     );
