@@ -53,7 +53,8 @@ class App extends Component {
 
   //Possible with setState??
   deletePhotoCard = (index) => {
-    this.state.photoCards.splice(index, 1)
+    //using pop the index of the picture change and the buttons get bugged
+    delete this.state.photoCards[index]
     return this.forceUpdate()
   }
 
@@ -66,6 +67,7 @@ class App extends Component {
           <PhotosFeed
             photoCards={this.state.photoCards}
             photoSelectionHandler={this.photoSelectionHandler}
+            deletePhotoCard={this.deletePhotoCard}
           />
         }
       </div>
