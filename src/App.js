@@ -42,7 +42,6 @@ class App extends Component {
       photoCards[selectedPhotoIndex].liked = false
       return this.forceUpdate()
     }
-
   }
 
   photoSelectionHandler = (index) => {
@@ -50,6 +49,12 @@ class App extends Component {
       selectedPhoto: this.state.photoCards[index],
       showPhotoSelection: true,
     })
+  }
+
+  //Possible with setState??
+  deletePhotoCard = (index) => {
+    this.state.photoCards.splice(index, 1)
+    return this.forceUpdate()
   }
 
   render() {
