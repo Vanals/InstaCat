@@ -7,7 +7,12 @@ class PhotosFeed extends Component {
     let receivedPhotos
     receivedPhotos = this.props.photoCards.map((photoCard) => {
       return(
-        <Photo photoName={photoCard.imageLink} index={photoCard.indexKey} photoSelectionHandler={this.props.photoSelectionHandler}/>
+        <Photo
+          photoName={photoCard.imageLink}
+          index={photoCard.indexKey}
+          photoSelectionHandler={this.props.photoSelectionHandler}
+          deletePhotoCard={this.props.deletePhotoCard}
+        />
       )
     })
 
