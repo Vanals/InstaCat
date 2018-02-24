@@ -45,4 +45,14 @@ describe('PhotoSelection Component', () => {
     expect(wrapper.find('#like-button').exists()).toEqual(true);
   });
 
+  it('test if an onClick function is called when the like button is clicked', () => {
+    const mockCallBack = jest.fn()
+    const wrapper = shallow(<PhotoSelection likeButtonHandler={mockCallBack} photoData={imageLink}/>);
+    wrapper.find('#like-button').simulate('click');
+    console.log(mockCallBack.mock, '1')
+    console.log(mockCallBack.mock.calls, '2')
+    console.log(mockCallBack.mock.calls.length, '3')
+    expect(mockCallBack.mock.calls.length).toEqual(1)
+
+  });
 })
