@@ -42,11 +42,16 @@ describe('App Component', () => {
     });
   })
 
-
   it('call setIndexKey', () => {
     expect(wrapperInstance.setIndexKey())
     expect(wrapperInstance.state.photoCards[0].indexKey).toEqual(0);
     expect(wrapperInstance.state.photoCards[1].indexKey).toEqual(1);
   });
+
+  it('call deletePhotoCard', () => {
+    expect(wrapperInstance.deletePhotoCard(1))
+    expect(wrapperInstance.state.photoCards.length).toEqual(1);
+  });
+
 
 })
