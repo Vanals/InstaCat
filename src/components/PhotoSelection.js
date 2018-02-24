@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../styles/PhotoSelection.css'
 class PhotoSelection extends Component {
   render() {
     const imgPath = "./images/" + `${this.props.photoData.imageLink}`

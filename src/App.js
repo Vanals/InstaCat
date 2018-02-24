@@ -1,8 +1,8 @@
+import './App.css';
 import React, { Component } from 'react';
 import PhotosFeed from './components/PhotosFeed'
 import PhotoSelection from './components/PhotoSelection'
 const photoCardsData = require('./photoCardsData.json');
-// import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -61,6 +61,7 @@ class App extends Component {
   render() {
     return (
     <div>
+      <h1 id='header-home'> -InstaCat- </h1>
       <div>
         {
           !this.state.showPhotoSelection &&
