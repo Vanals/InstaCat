@@ -5,9 +5,9 @@ class PhotosFeed extends Component {
   render() {
 
     let receivedPhotos
-    receivedPhotos = this.props.photoCards.map((photoCard, index) => {
+    receivedPhotos = this.props.photoCards.map((photoCard) => {
       return(
-        <Photo photoName={photoCard.imageLink} index={index} photoSelectionHandler={this.props.photoSelectionHandler}/>
+        <Photo photoName={photoCard.imageLink} index={photoCard.indexKey} photoSelectionHandler={this.props.photoSelectionHandler}/>
       )
     })
 
