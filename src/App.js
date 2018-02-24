@@ -34,8 +34,15 @@ class App extends Component {
     if (photoCards[selectedPhotoIndex].liked === false) {
       photoCards[selectedPhotoIndex].likes += 1
       photoCards[selectedPhotoIndex].liked = true
-      this.forceUpdate()
+      return this.forceUpdate()
     }
+
+    if (photoCards[selectedPhotoIndex].liked === true) {
+      photoCards[selectedPhotoIndex].likes -= 1
+      photoCards[selectedPhotoIndex].liked = false
+      return this.forceUpdate()
+    }
+
   }
 
   photoSelectionHandler = (index) => {
