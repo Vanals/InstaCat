@@ -14,6 +14,11 @@ class App extends Component {
     };
   }
 
+  likeButtonHandler = (index) => {
+    const photoCards = this.state.photoCards
+    photoCards[index].likes += 1
+    this.forceUpdate()
+  }
 
   photoSelectionHandler = (index) => {
     this.setState({
