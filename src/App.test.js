@@ -5,9 +5,13 @@ import App from './App'
 
 describe('App Component', () => {
 
+  let wrapperInstance
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(<App />);
+
+    wrapperInstance = wrapper.instance()
+    wrapperInstance.setState({photoCards: [ {likes:53} ] })
   });
 
   it('renders without crashing', () => {
@@ -22,9 +26,9 @@ describe('App Component', () => {
     expect(wrapper.find('PhotoSelection').exists()).toEqual(false);
   });
 
-  it('renders the PhotoSelection component', () => {
-    expect(wrapper.instance().likeButtonHandler(0))
-    expect(wrapper.state.photoCards[0].likes).toEqual(54);
+  it('call likeButtonHandler, which increase the like amount of the selected picture by 1', () => {
+    expect(wrapperInstance.likeButtonHandler(0))
+    expect(wrapperInstance.state.photoCards[0].likes).toEqual(54);
   });
 
 })
