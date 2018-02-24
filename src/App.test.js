@@ -26,12 +26,6 @@ describe('App Component', () => {
     expect(wrapper.find('PhotoSelection').exists()).toEqual(false);
   });
 
-  it('call showFeeds', () => {
-    wrapperInstance.setState({photoCards: [], selectedPhoto: { indexKey: 0}, showPhotoSelection: true, })
-    expect(wrapperInstance.showFeeds())
-    expect(wrapperInstance.find('PhotoSelection').exists()).toEqual(false)
-  });
-
   describe('#likeButtonHandler', function() {
 
     it('when liked ==== false, it should increase the like amount of the selected picture by 1 and set like to true', () => {

@@ -6,6 +6,7 @@ class PhotoSelection extends Component {
     const avatarPath = "./avatars/" + `${this.props.photoData.userIconLink}`
     return (
       <div>
+        <button id='back-button' onClick={this.props.showFeeds}>Go Back</button>
         <div> <img id='avatar' src={avatarPath} alt='avatarPicture'/>  </div>
         <p id='username'>{this.props.photoData.username}</p>
         <div> <img id='photo-selected' src={imgPath} alt='pictureSelected' /> </div>
