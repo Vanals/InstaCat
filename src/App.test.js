@@ -37,6 +37,12 @@ describe('App Component', () => {
     expect(wrapperInstance.state.photoCards[0].likes).toEqual(53);
   });
 
+  it('call likeButtonHandler when liked true. It shouldn\'t increase the like amount of the selected picture by 1', () => {
+    wrapperInstance.setState({photoCards: [ {likes:53, liked: true}, {likes:100} ], selectedPhoto: { indexKey: 0} })
+    expect(wrapperInstance.likeButtonHandler())
+    expect(wrapperInstance.state.photoCards[0].likes).toEqual(52);
+  });
+
   it('call setIndexKey', () => {
     expect(wrapperInstance.setIndexKey())
     expect(wrapperInstance.state.photoCards[0].indexKey).toEqual(0);
