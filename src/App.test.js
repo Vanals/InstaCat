@@ -26,22 +26,22 @@ describe('App Component', () => {
     expect(wrapper.find('PhotoSelection').exists()).toEqual(false);
   });
 
-  it('call likeButtonHandler when liked false. It should increase the like amount of the selected picture by 1', () => {
-    expect(wrapperInstance.likeButtonHandler())
-    expect(wrapperInstance.state.photoCards[0].likes).toEqual(54);
-  });
+  describe('#likeButtonHandler', function() {
 
-  it('call likeButtonHandler when liked true. It shouldn\'t increase the like amount of the selected picture by 1', () => {
-    wrapperInstance.setState({photoCards: [ {likes:53, liked: true}, {likes:100} ], selectedPhoto: { indexKey: 0} })
-    expect(wrapperInstance.likeButtonHandler())
-    expect(wrapperInstance.state.photoCards[0].likes).toEqual(53);
-  });
+    it('when liked ==== false, it should increase the like amount of the selected picture by 1 and set like to true', () => {
+      expect(wrapperInstance.likeButtonHandler())
+      expect(wrapperInstance.state.photoCards[0].likes).toEqual(54);
+      expect(wrapperInstance.state.photoCards[0].liked).toEqual(true)
+    });
 
-  it('call likeButtonHandler when liked true. It shouldn\'t increase the like amount of the selected picture by 1', () => {
-    wrapperInstance.setState({photoCards: [ {likes:53, liked: true}, {likes:100} ], selectedPhoto: { indexKey: 0} })
-    expect(wrapperInstance.likeButtonHandler())
-    expect(wrapperInstance.state.photoCards[0].likes).toEqual(52);
-  });
+    it('when liked === true, it should decrease the like amount of the selected picture by 1 and set like to false', () => {
+      wrapperInstance.setState({photoCards: [ {likes:53, liked: true}, {likes:100} ], selectedPhoto: { indexKey: 0} })
+      expect(wrapperInstance.likeButtonHandler())
+      expect(wrapperInstance.state.photoCards[0].likes).toEqual(52);
+      expect(wrapperInstance.state.photoCards[0].liked).toEqual(false);
+    });
+  })
+
 
   it('call setIndexKey', () => {
     expect(wrapperInstance.setIndexKey())
