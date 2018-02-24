@@ -51,6 +51,13 @@ class App extends Component {
     })
   }
 
+  showFeeds = () => {
+    this.setState({
+      selectedPhoto: undefined,
+      showPhotoSelection: false,
+    })
+  }
+
   //Possible with setState??
   deletePhotoCard = (index) => {
     //using pop the index of the picture change and the buttons get bugged
@@ -77,6 +84,7 @@ class App extends Component {
           <PhotoSelection
             photoData={this.state.selectedPhoto}
             likeButtonHandler={this.likeButtonHandler}
+            showFeeds={this.showFeeds}
           />
         }
       </div>
