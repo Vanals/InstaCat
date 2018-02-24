@@ -9,7 +9,7 @@ class PhotoSelection extends Component {
         <div> <img id='avatar' src={avatarPath} alt='avatarPicture'/>  </div>
         <p id='username'>{this.props.photoData.username}</p>
         <div> <img id='photo-selected' src={imgPath} alt='pictureSelected' /> </div>
-        <button id='like-button'> Like </button>
+        <button id='like-button' onClick={this.props.likeButtonHandler} > Like </button>
         <p id='likes-amount'>{this.props.photoData.likes}</p>
         <p id='description-photo'>{this.props.photoData.description}</p>
       </div>
