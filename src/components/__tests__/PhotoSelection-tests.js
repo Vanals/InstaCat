@@ -67,4 +67,13 @@ describe('PhotoSelection Component', () => {
     expect(mockCallBack.mock.calls.length).toEqual(1)
   });
 
+  it('call updateCommentText', () => {
+    let wrapperInstance = wrapper.instance()
+    console.log(wrapperInstance)
+    wrapperInstance.setState({commentText: null })
+    expect(wrapperInstance.updateCommentText('I always wished a black cat!'))
+    expect(wrapperInstance.state.commentText).toEqual('I always wished a black cat!');
+
+  });
+
 })
