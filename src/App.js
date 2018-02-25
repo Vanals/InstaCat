@@ -15,19 +15,22 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setIndexKey()
+    //Just didn't want to change directly the .json file
+    this.setIndexKeyAndComments()
   }
 
   //this allow me to refer to the correct picture for the like button.
-  setIndexKey = () => {
+  setIndexKeyAndComments = () => {
     const photoCardWithIndex = this.state.photoCards.map((photoCard, index) => {
     photoCard.indexKey = index;
+    photoCard.comments = []
     return photoCard;
     });
     this.setState({photoCards: photoCardWithIndex });
   }
 
   likeButtonHandler = () => {
+    // this.addComment(0, 'dania')
     const photoCards = this.state.photoCards
     const selectedPhotoIndex = this.state.selectedPhoto.indexKey
     //Use set state for the following code??
@@ -63,6 +66,10 @@ class App extends Component {
     //using pop the index of the picture change and the buttons get bugged
     delete this.state.photoCards[index]
     return this.forceUpdate()
+  }
+
+  addComment = (index, comment) => {
+    this.state.photoCards[index].comments.push(comment)
   }
 
   render() {

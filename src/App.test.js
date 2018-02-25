@@ -42,7 +42,7 @@ describe('App Component', () => {
     });
   })
 
-  it('call setIndexKey', () => {
+  it('call setIndexKeyAndComments', () => {
     expect(wrapperInstance.setIndexKeyAndComments())
     expect(wrapperInstance.state.photoCards[0].indexKey).toEqual(0);
     expect(wrapperInstance.state.photoCards[1].indexKey).toEqual(1);
