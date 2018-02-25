@@ -31,7 +31,6 @@ class App extends Component {
   }
 
   likeButtonHandler = () => {
-    // this.addComment(0, 'dania')
     const photoCards = this.state.photoCards
     const selectedPhotoIndex = this.state.selectedPhoto.indexKey
     //Use set state for the following code??
@@ -95,6 +94,7 @@ class App extends Component {
             likeButtonHandler={this.likeButtonHandler}
             showFeeds={this.showFeeds}
             addComment={this.addComment}
+            user={this.state.user}
           />
         }
       </div>
