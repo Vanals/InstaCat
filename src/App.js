@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //Just didn't want to change directly the .json file
+    //Just didn't want to change manually the .json file
     this.setIndexKeyAndComments()
   }
 

@@ -10,12 +10,19 @@ class PhotoSelection extends Component {
   }
 
   updateCommentText = (event) => {
-    this.setState({commentText: event})
+    console.log(event.target.value)
+    this.setState({commentText: event.target.value})
   }
 
+  // let photoComments
+  // console.log(this.props.photoData, 'COMMENTIIIIIIII')
+  // photoComments = this.props.photoData.comments.map((comment) => {
+  //   return <p>{comment}</p>
+  // })
   render() {
     const imgPath = "./images/" + `${this.props.photoData.imageLink}`
     const avatarPath = "./avatars/" + `${this.props.photoData.userIconLink}`
+
     return (
       <div>
 
@@ -25,9 +32,11 @@ class PhotoSelection extends Component {
 
         <button id='back-button' onClick={this.props.showFeeds}>Go Back</button>
         <div> <img id='avatar' src={avatarPath} alt='avatarPicture'/>  </div>
+
         <p id='username'>{this.props.photoData.username}</p>
         <div> <img id='photo-selected' src={imgPath} alt='pictureSelected' /> </div>
         <button id='like-button' onClick={this.props.likeButtonHandler} > Like </button>
+
         <p id='likes-amount'>{this.props.photoData.likes}</p>
         <p id='description-photo'>{this.props.photoData.description}</p>
       </div>

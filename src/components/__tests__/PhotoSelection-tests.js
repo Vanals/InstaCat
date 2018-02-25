@@ -72,8 +72,7 @@ describe('PhotoSelection Component', () => {
     console.log(wrapperInstance)
     wrapperInstance.setState({commentText: null })
     expect(wrapperInstance.updateCommentText('I always wished a black cat!'))
-    expect(wrapperInstance.state.commentText).toEqual('I always wished a black cat!');
-
+    expect(wrapperInstance.state.commentText).toEqual('I always wished a black cat!')
   });
 
 })
