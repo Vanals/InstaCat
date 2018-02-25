@@ -70,6 +70,7 @@ class App extends Component {
 
   addComment = (index, comment) => {
     this.state.photoCards[index].comments.push(comment)
+    console.log(this.state.photoCards)
   }
 
   render() {
@@ -92,6 +93,7 @@ class App extends Component {
             photoData={this.state.selectedPhoto}
             likeButtonHandler={this.likeButtonHandler}
             showFeeds={this.showFeeds}
+            addComment={this.addComment}
           />
         }
       </div>
