@@ -43,9 +43,18 @@ describe('App Component', () => {
   })
 
   it('call setIndexKey', () => {
-    expect(wrapperInstance.setIndexKey())
+    expect(wrapperInstance.setIndexKeyAndComments())
     expect(wrapperInstance.state.photoCards[0].indexKey).toEqual(0);
     expect(wrapperInstance.state.photoCards[1].indexKey).toEqual(1);
+    expect(wrapperInstance.state.photoCards[1].comments).toEqual([]);
+
+  });
+
+  it('call addComment', () => {
+    wrapperInstance.setState({photoCards: [ {comments: []} ]})
+    expect(wrapperInstance.addComment(0,'Lovely cat!'))
+    expect(wrapperInstance.state.photoCards[0].comments[0]).toEqual('Lovely cat!');
+
   });
 
   it('call deletePhotoCard', () => {
