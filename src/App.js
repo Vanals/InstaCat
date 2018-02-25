@@ -10,7 +10,8 @@ class App extends Component {
     this.state = {
       photoCards: photoCardsData,
       selectedPhoto: [],
-      showPhotoSelection: false
+      showPhotoSelection: false,
+      user: 'Marco Vanali'
     };
   }
 
@@ -70,7 +71,7 @@ class App extends Component {
 
   addComment = (index, comment) => {
     this.state.photoCards[index].comments.push(comment)
-    console.log(this.state.photoCards)
+    this.forceUpdate()
   }
 
   render() {
