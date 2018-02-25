@@ -10,7 +10,8 @@ describe('PhotoSelection Component', () => {
     username: 'MarcoMVF',
     userIconLink: 'MakersAcademy.jpeg',
     description: 'Marco is an awsome developer',
-    likes: 1000
+    likes: 1000,
+    comments: []
   }
 
   beforeEach(() => {

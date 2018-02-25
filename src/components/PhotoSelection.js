@@ -10,7 +10,6 @@ class PhotoSelection extends Component {
   }
 
   updateCommentText = (event) => {
-    console.log(event.target.value)
     this.setState({commentText: event.target.value})
   }
 
@@ -18,7 +17,6 @@ class PhotoSelection extends Component {
     const imgPath = "./images/" + `${this.props.photoData.imageLink}`
     const avatarPath = "./avatars/" + `${this.props.photoData.userIconLink}`
     let photoComments
-    console.log(this.props.photoData, 'COMMENTIIIIIIII')
     photoComments = this.props.photoData.comments.map((comment) => {
       return <p>{comment}</p>
     })
