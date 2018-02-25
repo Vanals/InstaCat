@@ -49,6 +49,10 @@ describe('PhotoSelection Component', () => {
     expect(wrapper.find('#comment-text-input').exists()).toEqual(true);
   });
 
+  it('render the send comment button', () => {
+    expect(wrapper.find('#send-comment-button').exists()).toEqual(true);
+  });
+
   it('test if an onClick function is called when the like button is clicked', () => {
     const mockCallBack = jest.fn()
     const wrapper = shallow(<PhotoSelection likeButtonHandler={mockCallBack} photoData={imageLink}/>);
