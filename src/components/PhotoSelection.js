@@ -8,6 +8,8 @@ class PhotoSelection extends Component {
       <div>
 
         <input type="text" id="comment-text-input" placeholder="Write your comment here" />
+        <button id='send-comment-button'>Post comment</button>
+
 
         <button id='back-button' onClick={this.props.showFeeds}>Go Back</button>
         <div> <img id='avatar' src={avatarPath} alt='avatarPicture'/>  </div>
