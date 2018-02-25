@@ -3,4 +3,6 @@
 #header-home {
   font-family: 'Yatra One', cursive;
   font-size: 60px;
+  position: relative;
+  left: 90px;
 }

@@ -1,24 +1,101 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:500');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500i');
 
+
 #avatar {
-  height: 90px;
+  height: 120px;
+  width: 100px;
+  clip-path: circle(23% at 30% 30%);
+  position: absolute;
+  top: 100px;
+  left: 15px;
 }
 
 #username {
   font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  top: 115px;
+  left: 75px;
+}
+
+#back-button{
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  box-shadow: 2px 2px rgb(18, 20, 20);
+  outline: none;
+  position: absolute;
+  top: 123px;
+  left: 400px;
+}
+
+#back-button:active{
+  transform:translateY(3px);
+  box-shadow: 1px 1px rgb(18, 20, 20);
+}
+
+#like-button{
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  box-shadow: 2px 2px rgb(18, 20, 20);
+  outline: none;
+  font-size: 15px;
+  position: absolute;
+  top: 500px;
+  left: 17px;
+}
+
+#likes-amount {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  color: rgb(79, 119, 199);
+  position: absolute;
+  top: 495px;
+  left: 120px;
+}
+
+#description-photo {
+  font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  top: 530px;
+  margin-left: 10px;
+  margin-right: 630px;
+}
+
+#comment-text-input{
+  position: absolute;
+  top: 650px;
+  left: 20px;
+  width: 400px;
+  height: 80px;
+  outline: none;
+  font-size: 20px;
 }
 
 #photo-selected {
   height: 300px;
 }
 
-#likes-amount {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 15px;
-  color: rgb(79, 119, 199)
+#send-comment-button{
+  border-radius: 50px;
+  height: 30px;
+  width: 80px;
+  box-shadow: 2px 2px rgb(18, 20, 20);
+  outline: none;
+  position: absolute;
+  top: 750px;
+  left: 20px;
 }
 
-#description-photo {
-  font-family: 'Roboto Mono', monospace;
+#divComments{
+  position: absolute;
+  top: 800px;
+  left: 20px;
+  line-height: 2px;
+
+}
+
+#Comment{
+  border-bottom: 1px solid;
 }

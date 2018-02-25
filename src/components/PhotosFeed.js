@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Photo from './Photo'
 
+
 class PhotosFeed extends Component {
   render() {
 
@@ -17,7 +18,7 @@ class PhotosFeed extends Component {
     })
 
     return (
-      <div>
+      <div id="divPhotoFeed">
         {receivedPhotos}
       </div>
     );
