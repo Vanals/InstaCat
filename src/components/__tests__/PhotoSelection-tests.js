@@ -67,12 +67,11 @@ describe('PhotoSelection Component', () => {
     expect(mockCallBack.mock.calls.length).toEqual(1)
   });
 
-  it('call updateCommentText', () => {
-    let wrapperInstance = wrapper.instance()
-    console.log(wrapperInstance)
-    wrapperInstance.setState({commentText: null })
-    expect(wrapperInstance.updateCommentText('I always wished a black cat!'))
-    expect(wrapperInstance.state.commentText).toEqual('I always wished a black cat!')
+  it('test if an onClick function is the send-comment-button is clicked', () => {
+    const mockCallBack = jest.fn()
+    const wrapper = shallow(<PhotoSelection addComment={mockCallBack} photoData={imageLink}/>);
+    wrapper.find('#send-comment-button').simulate('click');
+    expect(mockCallBack.mock.calls.length).toEqual(1)
   });
 
 })
