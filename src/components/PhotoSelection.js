@@ -14,14 +14,14 @@ class PhotoSelection extends Component {
     this.setState({commentText: event.target.value})
   }
 
-  // let photoComments
-  // console.log(this.props.photoData, 'COMMENTIIIIIIII')
-  // photoComments = this.props.photoData.comments.map((comment) => {
-  //   return <p>{comment}</p>
-  // })
   render() {
     const imgPath = "./images/" + `${this.props.photoData.imageLink}`
     const avatarPath = "./avatars/" + `${this.props.photoData.userIconLink}`
+    let photoComments
+    console.log(this.props.photoData, 'COMMENTIIIIIIII')
+    photoComments = this.props.photoData.comments.map((comment) => {
+      return <p>{comment}</p>
+    })
 
     return (
       <div>
@@ -29,6 +29,7 @@ class PhotoSelection extends Component {
         <input type="text" id="comment-text-input" onChange={this.updateCommentText} placeholder="Write your comment here" />
         <button id='send-comment-button' onClick={() => this.props.addComment(this.props.photoData.indexKey, this.state.commentText)}>Post comment</button>
 
+        {photoComments}
 
         <button id='back-button' onClick={this.props.showFeeds}>Go Back</button>
         <div> <img id='avatar' src={avatarPath} alt='avatarPicture'/>  </div>
