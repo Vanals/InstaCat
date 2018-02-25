@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
 import '../styles/PhotoSelection.css'
+
 class PhotoSelection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      commentText: null
+    };
+  }
+
+  updateCommentText = (event) => {
+    this.setState({commentText: event})
+  }
+
   render() {
     const imgPath = "./images/" + `${this.props.photoData.imageLink}`
     const avatarPath = "./avatars/" + `${this.props.photoData.userIconLink}`
     return (
       <div>
 
-        <input type="text" id="comment-text-input" placeholder="Write your comment here" />
-        <button id='send-comment-button'>Post comment</button>
+        <input type="text" id="comment-text-input" onChange={this.updateCommentText} placeholder="Write your comment here" />
+        <button id='send-comment-button' onClick={() => this.props.addComment(this.props.photoData.indexKey, this.state.commentText)}>Post comment</button>
 
 
         <button id='back-button' onClick={this.props.showFeeds}>Go Back</button>
