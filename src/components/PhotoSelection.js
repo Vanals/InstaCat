@@ -18,7 +18,7 @@ class PhotoSelection extends Component {
     const avatarPath = "./avatars/" + `${this.props.photoData.userIconLink}`
     let photoComments
     photoComments = this.props.photoData.comments.map((comment) => {
-      return <p>{comment}</p>
+      return <div><h5>{this.props.user}</h5><p>{comment}</p></div>
     })
 
     return (
