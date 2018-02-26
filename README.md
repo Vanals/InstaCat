@@ -1,5 +1,4 @@
 # MVF Developer Tests - Marco Vanali
-
 [How To Use](#how-to-use) | [Technologies](#technologies)
 
 ## InstaCat
@@ -8,10 +7,18 @@ InstaCat is a web app that, given a JSON file containing photos information, sho
 This project has been done using React as front-end technology.
 This app is not responsive yet, it'll only be perfectly CSS'ED' on a MacBook Pro 15inch.
 
-![](https://image.ibb.co/nbCHbw/Screen_Shot_2018_01_21_at_18_43_06.png)
+![](https://preview.ibb.co/kmaxyH/Screen_Shot_2018_02_26_at_11_13_47.png)
+![](https://image.ibb.co/i1LKCc/Screen_Shot_2018_02_26_at_11_12_13.png)
 
 
 ## Approach
+
+The first thing I did was to read the task carefully to highlight what was required. I decided then to follow the useful user stories given by the client to develop my app.
+Then before to start effectively to code I also spent time thinking about the components' map for my app.
+
+Reading the technologies used by the client I saw they used Jest & Enzyme to test React. I was used to  test with Mocha, Chai and Sinon but I decided to challenge my self learning how to set up a new test environment and use it to test React.
+
+From then onwards, I took steps to develop the app becoming always more confident with the test framework and then following the TDD approach for the new features.
 
 ## How to Use
 
@@ -93,6 +100,11 @@ $ npm test
 > I want to be able to go back to the feed once selected a picture,
 > so I don't have to refresh the page every time.
 
+
+### If I had more time
+* Clear the text area after submitting a comment.
+* Modify directly the Json file instead of the state containing the information.
+* Sexier style
 
 ## Technologies
 

@@ -38,7 +38,7 @@
 > I want to be able to delete a users card from my feed,
 > so that I have more control of the content I like.
 
-## Personal user Story
+### Personal user Story
 
 > As an instaGallery user,
 > I want to be able to go back to the feed once selected a picture,
