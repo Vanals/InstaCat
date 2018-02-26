@@ -1,31 +1,108 @@
-# MVF Developer Tests
-## React (cats gallery)
+# MVF Developer Tests - Marco Vanali
 
-Thanks for your interest in a developer role at MVF.
+[How To Use](#how-to-use) | [Technologies](#technologies)
 
-We have a simple project which we would like you to take a look at in your own time.
+## InstaCat
 
-You can spend as much or as little time on it as you wish, but if we have asked you to take a look at this, we would usually expect to receive a response in a 3-4 days.
+InstaCat is a web app that, given a JSON file containing photos information, shows you a feed of cats pictures. You can hide temporary the feed if you want and then you can click on a picture and write a comment, put a like, see the author's name and avatar and last but not least appreciate the picture in a bigger size.
+This project has been done using React as front-end technology.
+This app is not responsive yet, it'll only be perfectly CSS'ED' on a MacBook Pro 15inch.
 
-The task is to build a React app based on the data in this repository. We would like you to attempt this challenge using React, but aside from that you can use any language(s) you are familiar with, using any other libraries, modules or frameworks you feel appropriate. See it as a opportunity to showcase your professional software engineering skills.
+![](https://image.ibb.co/nbCHbw/Screen_Shot_2018_01_21_at_18_43_06.png)
 
-How would you implement this? Fork our repo and let us see your ideas!
 
-### Challenge
-Implement the stories in userStories.md to build a photo feed gallery.
+## Approach
 
-If you wish, you can refer to wireframes wireframe.png and bonus_stories_wireframe.png to guide you.
+## How to Use
 
-The data describing the gallery contents is located in photoCardsData.json
+Follow the instruction below to get and explore a copy of the project:
 
-Your app should be able to take any json in a similar format and display the relevant gallery.
+1) Clone the project
+```
+git clone git@github.com:Vanals/mvf_marco_vanali.git
+```
+2) Changes into the project directory on ur computer via Terminal
+```
+cd mvf_marco_vanali
+```
+3) Install the dependencies
+```
+Now in your terminal, from the main folder, run 'npm install'
+```
+4) Run the server
+```
+From the main folder run 'npm start'
+```
+5) Visit the web page
+```
+In your browser go to
+http://localhost:3000/
+```
+6) Enjoy!
 
-### Resources
-You don't have to use these, but you may find them helpful:
+----
+()To run the tests, run from the main folder
+```
+$ npm test
+```
+----
 
-Create React App - [https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)
-React Starter Kit - [https://github.com/rm-bergmann/app-starter-kit](https://github.com/rm-bergmann/app-starter-kit)
+## User Stories
 
----
-### MVF
-Do you want to work with the Smartest Tech and the Sharpest Minds? Apply at: http://www.mvfglobal.com/vacancies
+> As an instaGallery user,
+> I want to see a feed of photos from other user,
+> so that I can see what content users are sharing.
+
+> As an instaGallery user,
+> I want to see a photo a another user has taken,
+> So that i can appreciate their photography.
+
+> As an instaGallery user,
+> I want to see a users alias/name,
+> so that I know who added the photo to the gallery.
+
+> As an instaGallery user,
+> I want to see a users avatar,
+> So that I can familiarise myself with the user.
+
+> As an instaGallery user,
+> I want to see a description of the photo,
+> so that I learn more about the photos content.
+
+> As an instaGallery user,
+> I want to the ability to like the photo,
+> so that I can show my appreciation for a photo that I like.
+
+> As an instaGallery user,
+> I want to the see how many likes a photo has,
+> so that I can see how popular a photo is with other users.
+
+### Bonus Stories
+
+> As an instaGallery user,
+> I want to be able to unlike a photo in my feed,
+> so that I can undo a like made by accident.
+
+> As an instaGallery user,
+> I want to be able to delete a users card from my feed,
+> so that I have more control of the content I like.
+
+### Personal user Story
+
+> As an instaGallery user,
+> I want to be able to go back to the feed once selected a picture,
+> so I don't have to refresh the page every time.
+
+
+## Technologies
+
+| Technologies  | Use                |
+| ------------- | ------------------ |
+| Javascript    |                    |
+| React         | Front-end library  |
+| Jest & Enzyme | Testing            |
+| CSS + Html    | Styling            |
+
+## Author
+
+[Marco Vanali](https://github.com/Vanals)
