@@ -105,7 +105,7 @@ $ npm test
 ### If I had more time
 * Clear the text area after submitting a comment.
 * Modify directly the Json file instead of the state containing the information.
-* Sexier style
+* Sexier style(Es: change Like-button colour on click)
 
 ## Technologies
 

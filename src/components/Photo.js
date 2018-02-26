@@ -7,7 +7,7 @@ class Photo extends Component {
     const altText = "" + `${this.props.photoName}} not loaded`
     return (
       <div id="singlePhotoDiv">
-        <button id='hide-button' onClick={() => this.props.deletePhotoCard(this.props.index)}>Delete</button>
+        <button id='hide-button' onClick={() => this.props.deletePhotoCard(this.props.index)}>Hide</button>
         <div> <img src={imgPath} id='cat-photo' onClick={() => this.props.photoSelectionHandler(this.props.index)} alt={altText} /> </div>
       </div>
     );
