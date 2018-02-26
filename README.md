@@ -3,7 +3,7 @@
 
 ## InstaCat
 
-<b>InstaCat</b> is a web app that shows you a feed of cats pictures. You can hide the pictures temporarily them and then you can click on a picture and write a comment, put a like, see the author's name and avatar and last but not least appreciate the picture on its own page.
+<b>InstaCat</b> is a web app that shows you a feed of cats pictures. You can hide the pictures temporarily and then you can click on a picture and write a comment, put a like, see the author's name and avatar and last but not least appreciate the picture on its own page.
 This project has been done using React as front-end technology.
 This app is not responsive yet, it'll only be perfectly CSS'ED' on a MacBook Pro 15inch.
 
