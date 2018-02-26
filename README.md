@@ -1,5 +1,5 @@
 # MVF Developer Tests - Marco Vanali
-[How To Use](#how-to-use) | [Technologies](#technologies)
+[Approach](#approach) | [User Stories](#user-stories) | [How To Use](#how-to-use) | [Technologies](#technologies) | [Author](#author) |
 
 ## InstaCat
 
