@@ -74,5 +74,4 @@ describe('PhotoSelection Component', () => {
     wrapper.find('#send-comment-button').simulate('click');
     expect(mockCallBack.mock.calls.length).toEqual(1)
   });
-
 })

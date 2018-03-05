@@ -54,6 +54,7 @@ class App extends Component {
     })
   }
 
+  // Go back button's function
   showFeeds = () => {
     this.setState({
       selectedPhoto: undefined,

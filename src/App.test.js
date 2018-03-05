@@ -57,6 +57,12 @@ describe('App Component', () => {
 
   });
 
+  xit('test if an empty comment is add', () => {
+    wrapperInstance.setState({photoCards: [ {comments: []} ]})
+    expect(wrapperInstance.addComment(0, null))
+    expect(wrapperInstance.state.photoCards[0].comments.length).toEqual(0);
+  });
+
   it('call deletePhotoCard', () => {
     expect(wrapperInstance.deletePhotoCard(1))
     expect(wrapperInstance.state.photoCards[1]).toEqual(undefined);
