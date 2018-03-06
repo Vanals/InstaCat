@@ -2,7 +2,12 @@ const db = require('../db');
 const mongoose = require('mongoose');
 
 let kittySchema = mongoose.Schema({
-  name: String
+  username: String,
+  userIconLink: String,
+  imageLink: String,
+  description: String,
+  likes: Number,
+  liked: Boolean
 });
 
 kittySchema.methods.speak = function () {
