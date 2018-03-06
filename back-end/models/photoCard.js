@@ -1,7 +1,7 @@
 const db = require('../db');
 const mongoose = require('mongoose');
 
-let kittySchema = mongoose.Schema({
+let photoCardSchema = mongoose.Schema({
   username: String,
   userIconLink: String,
   imageLink: String,
@@ -10,6 +10,6 @@ let kittySchema = mongoose.Schema({
   liked: Boolean
 });
 
-let Kitten = mongoose.model('Kitten', kittySchema);
+let PhotoCard = mongoose.model('PhotoCard', photoCardSchema);
 
-module.exports = Kitten;
+module.exports = PhotoCard;

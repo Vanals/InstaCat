@@ -1,4 +1,4 @@
-const Kitten = require("./models/kitten")
+const PhotoCard = require("./models/photoCard")
 const mongoose = require('mongoose');
 
 // Drop database before seed
@@ -6,7 +6,7 @@ mongoose.connection.on('open', function() {
 
   mongoose.connection.db.dropDatabase();
 
-  const cat1 = new Kitten({
+  const cat1 = new PhotoCard({
       username: "heacan",
       userIconLink: "heacan1.jpg",
       imageLink: "cat1.jpeg",
@@ -15,15 +15,13 @@ mongoose.connection.on('open', function() {
       liked: true
     });
 
-
   console.log(cat1.imageLink);
-
 
   cat1.save(function (err, fluffy) {
     if (err) return console.error(err);
   });
 
-  Kitten.find(function (err, kittens) {
+  PhotoCard.find(function (err, kittens) {
     if (err) return console.error(err);
     console.log(kittens);
   })
