@@ -36,7 +36,7 @@ router.get('/', function(req, res) {
 
 
 router.route('/photoCard')
-  // create a bear (accessed at POST http://localhost:8080/api/bears)
+  //create a bear (accessed at POST http://localhost:8080/api/bears)
   .get(function(req, res) {
     PhotoCard.find(function(err, photocards) {
       if (err)
@@ -45,6 +45,8 @@ router.route('/photoCard')
       res.json(photocards);
     });
   });
+
+
 
 //THE FOLLOWING CODE IS  FOR A POST REQUEST, BUT FOR THE MOMENT I DON'T WANT TO ENABLE IT
 
