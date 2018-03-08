@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 // set our port
 
-var port = process.env.PORT || 8080;
+var port = 8080;
 
 // get an instance of the express Router
 
@@ -34,9 +34,7 @@ router.get('/', function(req, res) {
 
 // more routes for our API will happen here
 
-
 router.route('/photoCard')
-  //create a bear (accessed at POST http://localhost:8080/api/bears)
   .get(function(req, res) {
     PhotoCard.find(function(err, photocards) {
       if (err)
@@ -46,28 +44,7 @@ router.route('/photoCard')
     });
   });
 
-
-
-//THE FOLLOWING CODE IS  FOR A POST REQUEST, BUT FOR THE MOMENT I DON'T WANT TO ENABLE IT
-
-// router.route('/photoCard')
-//
-//   .post(function(req, res) {
-//
-//     var photocard = new PhotoCard();      // create a new instance of the Bear model
-//     photocard.name = req.body.name;  // set the bears name (comes from the request)
-//
-//     // save the bear and check for errors
-//     photocard.save(function(err) {
-//         if (err)
-//             res.send(err);
-//
-//         res.json({ message: 'PhotoCard created!' });
-//     });
-//
-//   });
-
-  // get all the photocards (accessed at GET http://localhost:8080/api/photoCard)
+// get all the photocards (accessed at GET http://localhost:8080/api/photoCard)
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
